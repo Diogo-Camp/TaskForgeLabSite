@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>FAQ - ForgeTaskLab</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Azeret+Mono:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&display=swap">
+    <link rel="stylesheet" href="{% static 'css/bs-theme-overrides.css' %}">
+    <link rel="stylesheet" href="{% static 'css/baguetteBox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Pricing-Centered-badges.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Pricing-Centered-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/untitled.css' %}">
+</head>
+
+<body>
+    <section class="my-5">
+        <div class="container">
+            <h1 class="fs-3 fw-bold">Perguntas Frequentes (FAQ)</h1>
+
+            <h2 class="fs-5 fw-bold">1. O que é o ForgeTaskLab?</h2>
+            <p>O ForgeTaskLab é um ecossistema de bots e ferramentas inteligentes no Telegram, focado em produtividade, aprendizado e automação.</p>
+
+            <h2 class="fs-5 fw-bold">2. Preciso pagar para usar os bots?</h2>
+            <p>Algumas funcionalidades são gratuitas, mas temos planos premium para desbloquear mais recursos.</p>
+
+            <h2 class="fs-5 fw-bold">3. Quais bots estão disponíveis?</h2>
+            <ul>
+                <li><strong>ForgeUtilityTools</strong>: Encurta links, gera QR Codes, consulta cotações e muito mais.</li>
+                <li><strong>Robot_Hub</strong>: Central de conexão para todos os bots e serviços do ForgeTaskLab.</li>
+                <li><strong>Rastreador de Encomendas</strong>: Receba atualizações automáticas sobre suas entregas.</li>
+                <li><strong>Bot de Legendas Automáticas</strong>: Gera legendas sincronizadas para vídeos.</li>
+            </ul>
+
+            <h2 class="fs-5 fw-bold">4. Como funciona o rastreamento de encomendas?</h2>
+            <p>Digite o código de rastreamento no bot e ele buscará informações atualizadas. Se ativar notificações, receberá atualizações automáticas.</p>
+
+            <h2 class="fs-5 fw-bold">5. O bot de legendas suporta múltiplos idiomas?</h2>
+            <p>Sim! Ele pode transcrever e traduzir vídeos para diferentes idiomas. Também permite edição manual das legendas antes da exportação.</p>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="container text-muted py-4 py-lg-5">
+            <ul class="list-inline">
+                <li class="list-inline-item me-4"><a href="{% url 'index' %}">Home</a></li>
+                <li class="list-inline-item me-4"><a href="{% url 'privacy' %}">Privacy</a></li>
+                <li class="list-inline-item"><a href="{% url 'hire_me' %}">Funcionalidades</a></li>
+            </ul>
+            <p class="mb-0">© 2025 ForgeTaskLab</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/bs-init.js' %}"></script>
+    <script src="{% static 'js/baguetteBox.min.js' %}"></script>
+    <script src="{% static 'js/template.js' %}"></script>
+</body>
+
+</html>
