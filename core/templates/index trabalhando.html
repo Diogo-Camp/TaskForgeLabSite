@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>TaskForgeLAB</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Azeret+Mono:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">TaskForgeLab</a>
+        </div>
+    </nav>
+    
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-1 mb-5 mb-md-3">
+                        <div class="col-sm-4">
+                            <img class="img-fluid border rounded border-0 shadow-sm mb-4" src="{% static 'img/taskforgelab_logo.jpeg' %}">
+                        </div>
+                        <div class="col-sm-8 order-sm-first order-lg-last">
+                            <h3 class="fs-5 fw-bold text-primary">TaskForgeLAB</h3>
+                            <p>Um ecossistema de bots e ferramentas inteligentes no Telegram!</p>
+                            <p>✅ <strong>ForgeUtilityTools</strong> – Encurte links, gere QR Codes, veja cotações e mais!</p>
+                            <p>✅ <strong>Robot_Hub</strong> – O centro de conexão com todos os nossos bots.</p>
+                            <h3 class="fs-6 fw-bold text-primary">Email</h3>
+                            <p><strong>diogo@taskforgelab.io</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-8 offset-lg-1">
+                    <h2 class="fs-5 fw-bold text-primary mb-3">Projects BOTS</h2>
+                    <div class="row row-cols-1 row-cols-md-3 gx-4 gy-4">
+                        <div class="col">
+                            <div class="card border-0 project-item">
+                                <a class="stretched-link text-decoration-none" href="{% url 'project_detail' 4 %}"></a>
+                                <img class="card-img w-100 d-block card-img-top" src="{% static 'img/projects/bot_hub_logo.png' %}">
+                                <div class="card-img-overlay text-white">
+                                    <h4 class="fs-6 fw-bold mb-1">Robot HUB</h4>
+                                    <p class="mb-0">O portal para ferramentas úteis no Telegram.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-0 project-item">
+                                <a class="stretched-link text-decoration-none" href="{% url 'project_detail' 1 %}"></a>
+                                <img class="card-img w-100 d-block card-img-top" src="{% static 'img/projects/utility_tarefas.webp' %}">
+                                <div class="card-img-overlay text-white">
+                                    <h4 class="fs-6 fw-bold mb-1">UtilityForgeTask</h4>
+                                    <p class="mb-0">Diversas funcionalidades para facilitar seu dia a dia.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-0 project-item">
+                                <a class="stretched-link text-decoration-none" href="{% url 'project_detail' 2 %}"></a>
+                                <img class="card-img w-100 d-block card-img-top" src="{% static 'img/projects/taskforgelab_logo.jpeg' %}">
+                                <div class="card-img-overlay text-white">
+                                    <h4 class="fs-6 fw-bold mb-1">Bot de Legendas Automáticas</h4>
+                                    <p class="mb-0">Gere legendas automaticamente para vídeos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="fs-5 fw-bold text-primary mb-3">Descrição do site</h3>
+                        <p>O TaskForgeLAB oferece um ecossistema de bots inteligentes para automação, aprendizado e produtividade.<br />Acesse ferramentas poderosas no Telegram para facilitar seu dia a dia.<br /><br /></p>
+                        <div class="bg-primary-subtle d-md-flex justify-content-md-between p-3 mb-3">
+                            <div>
+                                <p class="fw-bold mb-1">Robot Hub</p>
+                                <p class="mb-0">Gerenciador de bots</p>
+                            </div>
+                            <div class="text-md-end">
+                                <p class="text-primary mb-1">Gerenciador de todos bots</p>
+                                <p class="mb-0">Bot Telegram</p>
+                            </div>
+                        </div>
+                        <div class="d-md-flex justify-content-md-between p-3 mb-3">
+                            <div>
+                                <p class="fw-bold mb-1">UtilityForgeTask</p>
+                                <p class="mb-0">Utilidades Gerais.</p>
+                            </div>
+                            <div class="text-md-end">
+                                <p class="text-primary mb-1">Ferramentas práticas</p>
+                                <p class="mb-0">Bot Telegram</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="text-center bg-dark text-white py-4">
+        <p class="mb-0">© 2025 TaskForgeLab - Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

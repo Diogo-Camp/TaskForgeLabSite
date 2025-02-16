@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{% block title %}TaskForgeLAB{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Azeret+Mono&amp;display=swap">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">TaskForgeLab</a>
+        </div>
+    </nav>
+
+    <main class="my-5">
+        <main class="my-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Sidebar -->
+                    <div class="col-lg-3">
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-1 mb-5 mb-md-3">
+                            <div class="col-sm-4">
+                                <img class="img-fluid border rounded border-0 shadow-sm mb-4" src="{% static 'img/taskforgelab_logo.jpeg' %}">
+                            </div>
+                            <div class="col-sm-8 order-sm-first order-lg-last">
+                                <h3 class="fs-5 fw-bold text-primary">TaskForgeLAB</h3>
+                                <p>Um ecossistema de bots e ferramentas inteligentes no Telegram!</p>
+                                <p>✅ <strong>ForgeUtilityTools</strong> – Encurte links, gere QR Codes, veja cotações e mais!</p>
+                                <p>✅ <strong>Robot_Hub</strong> – O centro de conexão com todos os nossos bots.</p>
+                                <h3 class="fs-6 fw-bold text-primary">Email</h3>
+                                <p><strong>diogo@taskforgelab.io</strong></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Conteúdo principal -->
+                    <div class="col-lg-8 offset-lg-1">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </main>
+    </main>
+
+    <footer class="text-center bg-dark text-white py-4">
+        <p class="mb-0">© 2025 TaskForgeLab - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

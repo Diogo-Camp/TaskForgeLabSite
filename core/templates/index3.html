@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>TaskForgeLAB</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Azeret+Mono:300,400,600,700,800&display=swap">
+    <link rel="stylesheet" href="{% static 'css/bs-theme-overrides.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+</head>
+
+<body>
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 text-center">
+                    <img class="img-fluid border rounded border-0 shadow-sm mb-3" src="{% static 'img/taskforgelab_logo.jpeg' %}" alt="TaskForgeLAB Logo">
+                    <h3 class="fs-5 fw-bold text-primary">TaskForgeLAB</h3>
+                    <p>Um ecossistema de bots e ferramentas inteligentes no Telegram!<br>Acesse utilitários poderosos para produtividade, automação e aprendizado, tudo em um só lugar.</p>
+                    <ul class="list-unstyled">
+                        <li>✅ <strong>ForgeUtilityTools</strong> – Encurte links, gere QR Codes e muito mais!</li>
+                        <li>✅ <strong>Robot_Hub</strong> – O centro de conexão com todos os nossos bots e serviços.</li>
+                    </ul>
+                    <h3 class="fs-6 fw-bold text-primary">Email</h3>
+                    <p><strong>diogo@taskforgelab.io</strong></p>
+                </div>
+                <div class="col-lg-9">
+                    <h2 class="fs-5 fw-bold text-primary mb-3">Projects BOTS</h2>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                        {% for project in projects %}
+                        <div class="col">
+                            <div class="card border-0 project-item text-center shadow-sm">
+                                <a class="stretched-link text-decoration-none" href="{% url 'project_detail' project.id %}"></a>
+                                <img class="card-img-top rounded" src="{% static project.image %}" alt="{{ project.title }}">
+                                <div class="card-body">
+                                    <h4 class="fs-6 fw-bold text-dark">{{ project.title }}</h4>
+                                    <p class="text-muted">{{ project.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="text-center mt-5 bg-light py-4">
+        <div class="container">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="{% url 'index' %}" class="text-decoration-none">Projects</a></li>
+                <li class="list-inline-item"><a href="{% url 'privacy' %}" class="text-decoration-none">Privacy</a></li>
+                <li class="list-inline-item"><a href="{% url 'hire_me' %}" class="text-decoration-none">Funcionalidades</a></li>
+            </ul>
+            <p class="mb-0">&copy; 2025 ForgeTaskLab - Todos os direitos reservados</p>
+        </div>
+    </footer>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/bs-init.js' %}"></script>
+    <script src="{% static 'js/baguetteBox.min.js' %}"></script>
+    <script src="{% static 'js/template.js' %}"></script>
+</body>
+</html>

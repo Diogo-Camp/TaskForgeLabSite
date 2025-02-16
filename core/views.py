@@ -21,3 +21,6 @@ def faq(request):
 
 def payment(request):
     return render(request, 'payment.html')
+
+def base_view(request):
+    return render(request, 'base.html')
