@@ -12,25 +12,26 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os
 from dotenv import load_dotenv
 from pathlib import Path
-
-# Load environment variables
-load_dotenv()
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-ap(wfp4*1i_7$$fymf@z*(t2ber8i)3xo(!d0e@-gh*44+9_h(')
+SECRET_KEY = 'django-insecure-ap(wfp4*1i_7$$fymf@z*(t2ber8i)3xo(!d0e@-gh*44+9_h('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', 'True') == 'True'
+DEBUG = True
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
+ALLOWED_HOSTS = []
+
 
 # Application definition
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'taskforgelab_site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'core/templates')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,18 +73,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'taskforgelab_site.wsgi.application'
 
+
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv("DB_NAME", "taskforgelab_db"),
-        'USER': os.getenv("DB_USER", "froks"),
-        'PASSWORD': os.getenv("DB_PASSWORD", "Tenis230@"),
-        'HOST': os.getenv("DB_HOST", "db"),  # Atualizado para 'db' para uso no Docker
-        'PORT': os.getenv("DB_PORT", "5432"),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -103,6 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
@@ -113,6 +114,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
@@ -127,3 +129,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Para onde `collectstatic`
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+TEMPLATES[0]['DIRS'] = [os.path.join(BASE_DIR, 'core/templates')]

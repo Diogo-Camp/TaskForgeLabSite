@@ -1,0 +1,14 @@
+# Ignorar o arquivo .env
+.env
+
+# Ignorar a pasta do ambiente virtual (caso tenha clonado errado)
+venv/
+env/
+
+# Arquivos desnecessários do Django
+*.pyc
+__pycache__/
+
+# Arquivos de cache do editor de código
+.vscode/
+.idea/
