@@ -7,6 +7,9 @@ WORKDIR /app
 # Copia os arquivos do projeto para dentro do container
 COPY . .
 
+# Instala o cliente do PostgreSQL
+RUN apt-get update && apt-get install -y postgresql-client
+
 # Instala dependências do Django
 RUN pip install --no-cache-dir -r requirements.txt
 
